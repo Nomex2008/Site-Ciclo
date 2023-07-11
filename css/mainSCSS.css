@@ -4,6 +4,77 @@ body {
   color: #6A6E77;
 }
 
+body, html {
+  overflow-x: hidden;
+}
+
 .container {
   padding: 0 8%;
+  height: 100%;
+  min-height: 600px;
+  position: relative;
+}
+
+.section {
+  height: 100%;
+  min-height: 600px;
+  position: relative;
+}
+
+.into {
+  height: 100%;
+  min-height: 600px;
+}
+.into::before {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 2%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  content: "";
+  width: 3px;
+  height: 60px;
+  background-color: #000;
+}
+.into::after {
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  color: #E3E6EC;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  content: "01";
+}
+.into__content {
+  height: 100%;
+  min-height: 600px;
+  background: url("../img/into/into_beg.jpg") center no-repeat;
+}
+.into__text {
+  padding: 20% 0 auto 0;
+  max-width: 467px;
+  position: relative;
+  top: 35%;
+  right: -20%;
+}
+.into__subtitle {
+  text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 3%;
+  color: #E3E6EC;
+}
+.into__title {
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #FFF;
 }
