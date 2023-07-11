@@ -27,23 +27,27 @@
 }
 //text
 @mixin subTitle{
-    text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     font-size: 25px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-
-    margin-bottom: 3%;
+    color: #6A6E77;
 }
 @mixin title{
     font-size: 60px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    color: #1C1F25;
 }
+
 @mixin text{
-    
-}
+    color: #6A6E77;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 45px;
+    }
 //body
 
 body{
@@ -104,10 +108,66 @@ body,html{
     &__subtitle {
         @include subTitle;
         color: #E3E6EC;
+        margin-bottom: 3%;
+        text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     }
 
     &__title {
         @include title;
         color: #FFF;
     }
+}
+
+//simplest
+.simplest {
+
+        &::before{
+            @include beforeL;
+        }
+        &::after{
+            @include afterN;
+
+            content: '02';
+        }
+
+		&__content {
+            display: flex;
+		}
+
+		&__info {
+            width: 50%;
+            height: 100%;
+
+            margin: 16% 10% 0 0;
+
+		}
+
+		&__subTitle {
+            @include subTitle;
+            margin-bottom: 4%;
+		}
+
+		&__title {
+            @include title;
+            margin-bottom: 18%;
+		}
+
+        &__text {
+            @include text;
+
+            align-items: end;
+		}
+
+		&__img {
+            width: 50%;
+
+            max-height: 840px;
+
+            text-align: end;
+		}
+        &__img img{
+            max-width: 100%;
+
+            max-height: 840px;
+		}
 }
